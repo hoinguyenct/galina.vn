@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Title -->
+    <title><%= title %></title>
+
+    <!-- CSS library load -->
+    <%- include partials/styleSection.ejs %>
+
+    <!-- CSS Theme -->
+    <link id="theme" rel="stylesheet" href="css/themes/theme-blue.css" />
+    
+  </head>
+
+  <body class="header-horizontal dark-overlay">
+    <div id="body-wrapper">      
+        <!-- Header -->
+        <%- include partials/navBar.ejs %>
+        <!-- Content -->
+        <div id="content">
+            <!-- Section / Home -->
+            <%- include partials/wcPage/sliderSection.ejs %> 
+
+            <!-- Section / About -->
+            <%- include partials/wcPage/aboutSection.ejs %> 
+
+            <!-- Section / Gallery -->
+            <%- include partials/wcPage/gallerySection.ejs %> 
+
+            <!-- WEDDING EVENT -->
+            <%- include partials/wcPage/weddingSection.ejs %> 
+
+            <!-- CONFERENCE EVENT -->
+            <%- include partials/wcPage/conferenceSection.ejs %> 
+
+            <!-- CONTACT EVENT -->
+            <%- include partials/wcPage/contactWCSection.ejs %> 
+
+        </div> <!-- END CONTENT -->
+
+        <!-- Section / Footer -->
+        <%- include partials/footerSection.ejs %>  
+
+        <!-- Body Overlay -->
+        <div id="body-overlay"></div>
+            
+    </div> <!-- END BODY WRAPPER -->
+
+    <!-- Panel - Objects -->
+    <%- include partials/panelBar.ejs %>
+    
+    <!-- Video Modal / Demo -->
+    
+    <div class="modal modal-video fade" id="modalVideo" role="dialog">
+        <button class="close dark" data-dismiss="modal"></button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <iframe height="500"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Script library for page -->
+    <%- include partials/scriptSection.ejs %>  
+    
+    </body>
+</html>
+        

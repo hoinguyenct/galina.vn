@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Title -->
+    <title><%= title %></title>
+
+    <!-- CSS library load -->
+    <%- include partials/styleSection.ejs %>
+
+    <!-- CSS Theme -->
+    <link id="theme" rel="stylesheet" href="css/themes/theme-brown.css" />
+    
+  </head>
+
+  <body class="header-horizontal dark-overlay">
+    <div id="body-wrapper">      
+        <!-- Header -->
+        <%- include partials/navBar.ejs %>
+        <!-- Content -->
+        <div id="content">
+            <!-- Section / Home -->
+            <%- include partials/mudspaPage/sliderSection.ejs %> 
+
+            <!-- Section / About -->
+            <%- include partials/mudspaPage/aboutSection.ejs %> 
+
+            <!-- Section / Gallery -->
+            <%- include partials/mudspaPage/gallerySection.ejs %> 
+
+            <!-- Section / Spa -->
+            <%- include partials/mudspaPage/spaSection.ejs %> 
+
+            <!-- Section / Contact -->
+            <%- include partials/contactSection.ejs %>      
+            
+        </div> <!-- END CONTENT -->
+
+        <!-- Section / Footer -->
+        <%- include partials/footerSection.ejs %>  
+
+        <!-- Body Overlay -->
+        <div id="body-overlay"></div>
+            
+    </div> <!-- END BODY WRAPPER -->
+
+    <!-- Panel - Objects -->
+    <%- include partials/panelBar.ejs %>
+    
+    <!-- Video Modal / Demo -->
+    
+    <div class="modal modal-video fade" id="modalVideo" role="dialog">
+        <button class="close dark" data-dismiss="modal"></button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <iframe height="500"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Script library for page -->
+    <%- include partials/scriptSection.ejs %>  
+    
+    </body>
+</html>
+        

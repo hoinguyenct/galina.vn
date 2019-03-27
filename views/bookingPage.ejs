@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>GALINA | Booking Engine Center</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+
+	<!-- Custom stlylesheet -->
+  <link rel="stylesheet" href="css/booking-style.css" />
+  <link id="theme" rel="stylesheet" href="css/themes/theme-blue.css" />
+
+  <!-- CSS library load -->
+  <%- include partials/styleSection.ejs %>
+  
+  
+</head>
+
+<body class="header-horizontal dark-overlay">
+  <div id="body-wrapper">      
+    
+    <!-- Header -->
+    <%- include partials/navBar.ejs %>
+    <!-- Header / End -->
+
+    <div id="content">
+      <div id="booking" class="hotel-booking" style="background-image: url('img/background-ht.jpg');">
+          <section class="container" style="padding-top: 50px;">
+            <div class="objects-grid gutters-sm row">
+              
+              <div class="col-lg-7">
+                <div class="booking-cta">
+                  <h1>Make your reservation</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi facere, soluta magnam consectetur molestias itaque
+                    ad sint fugit architecto incidunt iste culpa perspiciatis possimus voluptates aliquid consequuntur cumque quasi.
+                    Perspiciatis.
+                  </p>
+                </div>
+              </div> <!-- end col-left-->
+
+              <div class="col-lg-4 ">
+                <div class="booking-form">
+                  <span class="form-label fa fa-warning" id="warning-message" style="display: none; color: red; font-weight: normal"> Please input the requirement fill</span>
+                  <form name='booking-form' id="bookingform">
+                    
+                    <div class="form-group">
+                      <span class="form-label">Guest name </span>
+                      <input class="form-control" id="guest-name" type="text" placeholder=" Please give us your name" required />
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-7">
+                        <div class="form-group">
+                          <span class="form-label">Email</span>
+                          <input class="form-control" id='guest-contact' type="text" placeholder=" email to get confirmed booking" required />
+                        </div>
+                      </div>
+                      <div class="col-sm-5">
+                        <div class="form-group">
+                          <span class="form-label">Tel</span>
+                          <input class="form-control" id='guest-tel' type="text" placeholder=" tel for contact" required />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <span class="form-label">Check In</span>
+                          <input class="form-control datepicker" id="date-check-in" required />
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <span class="form-label">Check out</span>
+                          <input class="form-control datepicker" id="date-check-out" required />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <span class="form-label">Rooms</span>
+                          <select class="form-control" id="room-no" >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                          </select>
+                          <span class="select-arrow"></span>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <span class="form-label">Adults</span>
+                          <select class="form-control" id='adult'>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                          </select>
+                          <span class="select-arrow"></span>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <span class="form-label">Children</span>
+                          <select class="form-control" id='kid'>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                          </select>
+                          <span class="select-arrow"></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <span class="form-label">Coupon code </span>
+                      <input class="form-control" id="coupon-code" type="text" placeholder=" Put your coupon code to get promotion" />
+                    </div>
+
+                    <div class="form-group">
+                      <span class="form-label">Book notes </span>
+                      <textarea class="form-control md-textarea" rows="3" id="book-note" placeholder=" Please give us your notes for this booking" style="height: auto"/></textarea>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 20px; padding-left: 20px; padding-top: 10px; border-top: #e5e5e5 1px solid;">
+                          <input type="checkbox" class="form-check-input" id="checkbox-early-bird" style="margin-top: 10px">
+                          <label class="" style="font-size: 11px">
+                            <span style="display: inline-block"> Ealy bird service to get <span style="font-size: 15px; font-weight: bold">30%</span> discount </span>   
+                            <span style="font-weight: bold; display: inline-block"> GALINA MUDBATH & SPA | GALINA SHOW </span>  ticket 
+                          </label>
+                      
+                    </div>
+
+                    <div class="form-btn">
+                      <button class="submit-btn bookingbtn"> 
+                        <span id="message">Check availability</span>  <i class="fa fa-spinner fa-spin" style="font-size:20px; display: none"></i>
+                        <span id="message-thank-btn" style="display: none"> Thank you !!!</span> 
+                      </button>
+                      <p class="thankyou" style="display:none; padding-top: 10px; font-size: 11px">  We have send an email about your booking, please check your mail to get new information from us.</p>
+                      <p class="error" style="display:none; padding-top: 10px; font-size: 11px">  We get trouble with your booking request. Please do it again.</p>
+                    </div>
+                  </form>
+                </div>
+              </div> <!-- end col-right-->
+          </section> <!-- end .row-->
+          
+        </div> <!-- end #center-->
+      </div> <!-- end #booking-->
+  </div> <!-- end content-->
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-dark dark">
+  
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-md-2 text-center text-md-left mb-5 mb-md-0">
+                  <a href="#"><img src="img/logo-light.svg" width="120" alt=""></a>
+              </div>
+              <div class="col-md-10 text-center text-md-right">
+                  <ul class="nav nav-footer mr-4">
+                      <li><a href="#" class="active">HOTEL</a></li>
+                      <li><a href="#">MUD BATH & SPA</a></li>
+                      <li><a href="#">WEDDING & CONVENTION</a></li>
+                      <li><a href="#">SHOW</a></li>
+                      <li><a href="#">LAKE VIEW</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+  </footer>
+  <!-- Footer / End -->
+</div> <!-- end bodywrapper-->
+
+  <%- include partials/panelBar.ejs %>
+  
+  <!-- Script library for page -->
+  <%- include partials/scriptSection.ejs %>  
+  
+  <script>
+    $(document).ready(function(){
+      $('#navigation-main').addClass('d-none');
+    })
+  </script>
+</body>
+</html>

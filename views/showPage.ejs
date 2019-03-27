@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Title -->
+    <title><%= title %></title>
+
+    <!-- CSS library load -->
+    <%- include partials/styleSection.ejs %>
+
+    <!-- CSS Theme -->
+    <link id="theme" rel="stylesheet" href="css/themes/theme-violet.css" />
+    
+  </head>
+
+  <body class="header-horizontal dark-overlay">
+    <div id="body-wrapper">      
+        <!-- Header -->
+        <%- include partials/navBar.ejs %>
+        <!-- Content -->
+        <div id="content">
+            <!-- SLIDER-->
+            <%- include partials/showPage/sliderSection.ejs %>  
+
+            <!-- ABOUT-->
+            <%- include partials/showPage/aboutSection.ejs %>  
+
+            <!-- SHOW-->
+            <%- include partials/showPage/showSection.ejs %>  
+
+            <!-- GALLERY -->
+            <%- include partials/showPage/gallerySection.ejs %>  
+
+            <!-- WHO WE ARE -->
+            <%- include partials/showPage/wwaShowSection.ejs %>  
+
+            <!-- Section / Contact -->
+            <%- include partials/showPage/contactShowSection.ejs %>     
+
+
+        </div> <!-- END CONTENT -->
+
+        <!-- Section / Footer -->
+        <%- include partials/footerSection.ejs %>  
+
+        <!-- Body Overlay -->
+        <div id="body-overlay"></div>
+            
+    </div> <!-- END BODY WRAPPER -->
+
+    <!-- Panel - Objects -->
+    <%- include partials/panelBar.ejs %>
+    
+    <!-- Video Modal / Demo -->
+    
+    <div class="modal modal-video fade" id="modalVideo" role="dialog">
+        <button class="close dark" data-dismiss="modal"></button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <iframe height="500"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Script library for page -->
+    <%- include partials/scriptSection.ejs %>  
+    
+    </body>
+</html>
+        

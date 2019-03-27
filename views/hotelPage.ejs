@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Title -->
+    <title><%= title %></title>
+
+    <!-- CSS library load -->
+    <%- include partials/styleSection.ejs %>
+
+    <!-- CSS Theme -->
+    <link id="theme" rel="stylesheet" href="css/themes/theme-violet.css" />
+    
+  </head>
+
+  <body class="header-horizontal dark-overlay">
+    <div id="body-wrapper">      
+      <!-- Header -->
+      <%- include partials/navBar.ejs %>
+    
+      <!-- Content -->
+      <div id="content">
+        <!-- Section / Home -->
+        <%- include partials/hotelPage/sliderSection.ejs %>  
+  
+        <!-- Section / About -->
+        <%- include partials/hotelPage/aboutSection.ejs %>  
+  
+        <!-- Section / rooms -->
+        <%- include partials/hotelPage/roomSection.ejs %>  
+
+        <!-- Section / Features -->
+        <%- include partials/hotelPage/featureSection.ejs %>  
+  
+        <!-- Section / Gallery -->
+        <%- include partials/hotelPage/gallerySection.ejs %>  
+  
+        <!-- Section / Promotion -->
+        <%- include partials/hotelPage/promotionSection.ejs %>      
+  
+        <!-- Section / Who we are? -->
+        <%- include partials/wwaSection.ejs %>      
+      
+        <!-- Section / Contact -->
+        <%- include partials/contactSection.ejs %>      
+      
+    </div> <!-- END CONTENT -->
+    
+    <!-- Section / Footer -->
+    <%- include partials/footerSection.ejs %>  
+
+    <!-- Body Overlay -->
+    <div id="body-overlay"></div>
+  
+    </div> <!-- END BODY WRAPPER -->
+  
+    <!-- Panel - Objects -->
+    <%- include partials/panelBar.ejs %>
+    
+    <!-- Video Modal / Demo -->
+    <div class="modal modal-video fade" id="modalVideo" role="dialog">
+        <button class="close dark" data-dismiss="modal"></button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <iframe height="500"></iframe>
+            </div>
+        </div>
+    </div>
+  
+  
+  <!-- Script library for page -->
+  <%- include partials/scriptSection.ejs %>  
+  
+  </body>
+</html>
